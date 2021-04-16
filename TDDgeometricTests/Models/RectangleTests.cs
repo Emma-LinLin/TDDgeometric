@@ -19,6 +19,15 @@ namespace TDDgeometric.Models.Tests
         }
 
         [TestMethod()]
+        [DataRow(float.MaxValue, float.MaxValue, 0)]
+        public void GetArea_MaxValue_ReturnZero(float inputData1, float inputData2, float expected)
+        {
+            var calc = new Rectangle(inputData1, inputData2);
+            var actual = calc.GetArea();
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod()]
         [DataRow(4, 2, 8)]
         [DataRow(4, 4, 16)]
         [DataRow(50, 20, 1000)]
@@ -54,6 +63,15 @@ namespace TDDgeometric.Models.Tests
         [TestMethod()]
         [DataRow(0, 0, 0)]
         public void GetPerimiter_Zero_ReturnZero(float inputData1, float inputData2, float expected)
+        {
+            var calc = new Rectangle(inputData1, inputData2);
+            var actual = calc.GetPerimiter();
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod()]
+        [DataRow(float.MaxValue, float.MaxValue, 0)]
+        public void GetPerimiter_MaxValue_ReturnZero(float inputData1, float inputData2, float expected)
         {
             var calc = new Rectangle(inputData1, inputData2);
             var actual = calc.GetPerimiter();

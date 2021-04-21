@@ -15,18 +15,26 @@ namespace TDDgeometric.Models
 
         public override float GetArea()
         {
-            if (Side < MathF.Sqrt(float.MaxValue))
+            if(Side > 0)
             {
-                return Side > 0 ? MathF.Round(MathF.Pow(Side, 2), 2) : default;
+                var result = MathF.Round(MathF.Pow(Side, 2), 2);
+                if(result < float.MaxValue)
+                {
+                    return result;
+                }
             }
             return default;
         }
 
         public override float GetPerimiter()
         {
-            if(Side < float.MaxValue / 4)
+            if(Side > 0)
             {
-                return Side > 0 ? Side * 4 : default;
+                var result = Side * 4;
+                if(result < float.MaxValue)
+                {
+                    return result;
+                }
             }
             return default;
         }

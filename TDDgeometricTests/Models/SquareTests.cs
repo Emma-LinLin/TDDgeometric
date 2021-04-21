@@ -23,9 +23,7 @@ namespace TDDgeometric.Models.Tests
 
         [TestMethod()]
         [DataRow (4.7f, 22.09f)]
-        [DataRow(8.3f, 68.89f)]
         [DataRow(5, 25)]
-        [DataRow(20, 400)]
         public void GetArea_Positive_ShouldReturnArea(float inputData, float expected)
         {
             var calc = new Square(inputData);
@@ -35,6 +33,7 @@ namespace TDDgeometric.Models.Tests
 
         [TestMethod()]
         [DataRow (0,0)]
+        [DataRow(-4, 0)]
         [DataRow(float.MaxValue, 0)]
         public void GetPerimiter_Negative_ShouldReturnZero(float inputData, float expected)
         {
@@ -45,11 +44,7 @@ namespace TDDgeometric.Models.Tests
 
         [TestMethod()]
         [DataRow(4, 16)]
-        [DataRow(5, 20)]
-        [DataRow(40, 160)]
         [DataRow(1.7f, 6.8f)]
-        [DataRow(3.4f, 13.6f)]
-        [DataRow(9.63f, 38.52f)]
         public void GetPerimiter_Positive_ShouldReturnPerimiter(float inputData, float expected)
         {
             var calc = new Square(inputData);

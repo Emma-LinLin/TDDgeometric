@@ -17,19 +17,29 @@ namespace TDDgeometric.Models
 
         public override float GetArea()
         {
-            if(Base < float.MaxValue / Height)
+            if(Base > 0 && Height > 0)
             {
-                return Base >= 0 && Height >= 0 ? Base * Height : default;
+                var result = Base * Height;
+                if(result < float.MaxValue)
+                {
+                    return result;
+                }
             }
+
             return default;
         }
 
         public override float GetPerimiter()
         {
-            if(Base < float.MaxValue/2 && Height < float.MaxValue / 2)
+            if(Base > 0 && Height > 0)
             {
-                return Base >= 0 && Height >= 0 ? (Base * 2) + (Height * 2) : default;
+                var result = (Base * 2) + (Height * 2);
+                if(result < float.MaxValue)
+                {
+                    return result;
+                }
             }
+
             return default;
         }
     }

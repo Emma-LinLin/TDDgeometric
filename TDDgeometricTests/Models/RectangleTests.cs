@@ -10,9 +10,8 @@ namespace TDDgeometric.Models.Tests
     public class RectangleTests
     {
         [TestMethod()]
-        [DataRow(0,0,0)]
-        [DataRow(-35, -7, 0)]
-        [DataRow(-2.7f, -4.5f, 0)]
+        [DataRow(0, 0, 0)]
+        [DataRow(-4, -2, 0)]
         [DataRow(float.MaxValue, float.MaxValue, 0)]
         public void GetArea_Negative_ShouldReturnZero(float inputData1, float inputData2, float expected)
         {
@@ -23,8 +22,6 @@ namespace TDDgeometric.Models.Tests
 
         [TestMethod()]
         [DataRow(4, 2, 8)]
-        [DataRow(4, 4, 16)]
-        [DataRow(50, 20, 1000)]
         [DataRow(4.4f, 2.5f, 11)]
         [DataRow(16.6f, 3.3f, 54.78f)]
         public void GetArea_Positive_ShouldReturnArea(float inputData1, float inputData2, float expected)

@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace TDDgeometric.Models
+﻿namespace TDDgeometric.Models
 {
     public abstract class GeometricShapes
     {

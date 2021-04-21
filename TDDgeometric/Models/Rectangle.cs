@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace TDDgeometric.Models
+﻿namespace TDDgeometric.Models
 {
     public class Rectangle : GeometricShapes
     {
@@ -17,10 +13,10 @@ namespace TDDgeometric.Models
 
         public override float GetArea()
         {
-            if(Base > 0 && Height > 0)
+            if (Base > 0 && Height > 0)
             {
                 var result = Base * Height;
-                if(result < float.MaxValue)
+                if (result < float.MaxValue)
                 {
                     return result;
                 }
@@ -31,10 +27,10 @@ namespace TDDgeometric.Models
 
         public override float GetPerimiter()
         {
-            if(Base > 0 && Height > 0)
+            if (Base > 0 && Height > 0)
             {
                 var result = (Base * 2) + (Height * 2);
-                if(result < float.MaxValue)
+                if (result < float.MaxValue)
                 {
                     return result;
                 }

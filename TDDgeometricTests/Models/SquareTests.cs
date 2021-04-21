@@ -1,14 +1,11 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using TDDgeometric.Models;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace TDDgeometric.Models.Tests
 {
     [TestClass()]
     public class SquareTests
     {
+        //Tests GetArea method for Square objects with negative input, should return zero
         [TestMethod()]
         [DataRow(0,0)]
         [DataRow(-1, 0)]
@@ -21,6 +18,7 @@ namespace TDDgeometric.Models.Tests
             Assert.AreEqual(expected, actual);
         }
 
+        //Tests GetArea method for Square objects with positive input, should return the square area
         [TestMethod()]
         [DataRow (4.7f, 22.09f)]
         [DataRow(5, 25)]
@@ -31,6 +29,7 @@ namespace TDDgeometric.Models.Tests
             Assert.AreEqual(expected, actual);
         }
 
+        //Tests GetPerimiter method for Square objects with negative input, should return zero
         [TestMethod()]
         [DataRow (0,0)]
         [DataRow(-4, 0)]
@@ -42,6 +41,7 @@ namespace TDDgeometric.Models.Tests
             Assert.AreEqual(expected, actual);
         }
 
+        //Tests GetPerimiter method for Square objects with positive input, should return the square perimiter
         [TestMethod()]
         [DataRow(4, 16)]
         [DataRow(1.7f, 6.8f)]

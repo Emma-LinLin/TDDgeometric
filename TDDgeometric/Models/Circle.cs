@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace TDDgeometric.Models
 {
@@ -23,6 +21,7 @@ namespace TDDgeometric.Models
                     return result;
                 }
             }
+
             return default;
         }
 
@@ -31,11 +30,12 @@ namespace TDDgeometric.Models
             if (Radius > 0)
             {
                 var result = MathF.Round((2 * MathF.PI * Radius), 2);
-                if(result < float.MaxValue)
+                if (result < float.MaxValue)
                 {
                     return result;
                 }
             }
+
             return default;
         }
     }

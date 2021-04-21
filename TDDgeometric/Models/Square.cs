@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace TDDgeometric.Models
 {
@@ -15,27 +13,29 @@ namespace TDDgeometric.Models
 
         public override float GetArea()
         {
-            if(Side > 0)
+            if (Side > 0)
             {
                 var result = MathF.Round(MathF.Pow(Side, 2), 2);
-                if(result < float.MaxValue)
+                if (result < float.MaxValue)
                 {
                     return result;
                 }
             }
+
             return default;
         }
 
         public override float GetPerimiter()
         {
-            if(Side > 0)
+            if (Side > 0)
             {
                 var result = Side * 4;
-                if(result < float.MaxValue)
+                if (result < float.MaxValue)
                 {
                     return result;
                 }
             }
+
             return default;
         }
     }

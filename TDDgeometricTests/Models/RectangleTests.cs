@@ -1,14 +1,11 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using TDDgeometric.Models;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace TDDgeometric.Models.Tests
 {
     [TestClass()]
     public class RectangleTests
     {
+        //Tests GetArea method for rectangle objects with negative input, should return zero
         [TestMethod()]
         [DataRow(0, 0, 0)]
         [DataRow(-4, -2, 0)]
@@ -20,6 +17,7 @@ namespace TDDgeometric.Models.Tests
             Assert.AreEqual(expected, actual);
         }
 
+        //Tests GetArea method for rectangle objects with positive input, should return area of rectangle
         [TestMethod()]
         [DataRow(4, 2, 8)]
         [DataRow(4.4f, 2.5f, 11)]
@@ -31,6 +29,7 @@ namespace TDDgeometric.Models.Tests
             Assert.AreEqual(expected, actual);
         }
 
+        //Tests GetPermiter method for rectangle objects with negative input, should return zero
         [TestMethod()]
         [DataRow(0, 0, 0)]
         [DataRow(-1.5f, 5, 0)]
@@ -43,6 +42,7 @@ namespace TDDgeometric.Models.Tests
             Assert.AreEqual(expected, actual);
         }
 
+        //Tests GetArea method for rectangle objects with positive input, should return area of rectangle
         [TestMethod()]
         [DataRow(4, 4, 16)]
         [DataRow(4.2f, 4.9f, 18.2f)]

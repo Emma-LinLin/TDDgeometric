@@ -1,8 +1,4 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using TDDgeometric.Controllers;
-using System;
-using System.Collections.Generic;
-using System.Text;
 using TDDgeometric.Models;
 
 namespace TDDgeometric.Controllers.Tests
@@ -10,6 +6,7 @@ namespace TDDgeometric.Controllers.Tests
     [TestClass()]
     public class GeometricCalculatorTests
     {
+        //Tests GetTotalArea method with null object, should return zero
         [TestMethod()]
         public void GetTotalArea_Null_ShouldReturnZero()
         {
@@ -18,6 +15,7 @@ namespace TDDgeometric.Controllers.Tests
             Assert.AreEqual(0, actual);
         }
 
+        //Tests GetTotalArea method with an empty array, should return zero
         [TestMethod()]
         public void GetTotalArea_EmptyArray_ShouldReturnZero()
         {
@@ -28,6 +26,7 @@ namespace TDDgeometric.Controllers.Tests
             Assert.AreEqual(0, actual);
         }
 
+        //Tests GetTotalArea method with negative parameters for objects, should return zero
         [TestMethod()]
         public void GetTotalArea_Negative_ShouldReturnZero()
         {
@@ -44,6 +43,7 @@ namespace TDDgeometric.Controllers.Tests
             Assert.AreEqual(0, actual);
         }
 
+        //Tests GetTotalArea method with positive parameter for objects, should return sum of total area
         [TestMethod()]
         public void GetTotalArea_Positive_ShouldReturnTotalArea()
         {
@@ -60,6 +60,7 @@ namespace TDDgeometric.Controllers.Tests
             Assert.AreEqual(125.37f, actual);
         }
 
+        //Tests GetTotalPerimiter method with null object, should return zero
         [TestMethod()]
         public void GetTotalPerimiter_Null_ShouldReturnZero()
         {
@@ -68,6 +69,7 @@ namespace TDDgeometric.Controllers.Tests
             Assert.AreEqual(0, actual);
         }
 
+        //Tests GetTotalPerimiter method with an empty array, should return zero
         [TestMethod()]
         public void GetTotalPerimiter_EmptyArray_ShouldReturnZero()
         {
@@ -78,6 +80,7 @@ namespace TDDgeometric.Controllers.Tests
             Assert.AreEqual(0, actual);
         }
 
+        //Tests GetTotalPerimiter method with negative parameter for objects, should return zero
         [TestMethod()]
         public void GetTotalPerimiter_Negative_ShouldReturnZero()
         {
@@ -94,6 +97,7 @@ namespace TDDgeometric.Controllers.Tests
             Assert.AreEqual(0, actual);
         }
 
+        //Tests GetTotalPerimiter method with positive parameter for objects, should return sum of perimiter
         [TestMethod()]
         public void GetTotalPerimiter_Positive_ShouldReturnTotalPerimiter()
         {

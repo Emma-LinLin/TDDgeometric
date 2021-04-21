@@ -1,12 +1,10 @@
-﻿using System;
-
-namespace TDDgeometric
+﻿namespace TDDgeometric
 {
     class Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+
         }
     }
 }

@@ -2,9 +2,14 @@
 {
     public class Rectangle : GeometricShapes
     {
-        public float Base { get; set; }
-        public float Height { get; set; }
+        private float Base { get; set; }
+        private float Height { get; set; }
 
+        /// <summary>
+        /// Sets the properties of the object
+        /// </summary>
+        /// <param name="Rbase">input data, rectangle base</param>
+        /// <param name="height">input data, rectangle height</param>
         public Rectangle(float Rbase, float height)
         {
             Base = Rbase;

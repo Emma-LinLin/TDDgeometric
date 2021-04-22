@@ -4,8 +4,12 @@ namespace TDDgeometric.Models
 {
     public class IsocelesTriangle : GeometricShapes
     {
-        public float Side { get; set; }
+        private float Side { get; set; }
 
+        /// <summary>
+        /// Sets the property of an object
+        /// </summary>
+        /// <param name="side">input data, the side of an isoceles triangle</param>
         public IsocelesTriangle(float side)
         {
             Side = side;

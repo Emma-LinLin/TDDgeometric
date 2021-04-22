@@ -4,8 +4,12 @@ namespace TDDgeometric.Models
 {
     public class Circle : GeometricShapes
     {
-        public float Radius { get; set; }
+        private float Radius { get; set; }
 
+        /// <summary>
+        /// Sets the property of an object
+        /// </summary>
+        /// <param name="radius">input data, radius of an circle object</param>
         public Circle(float radius)
         {
             Radius = radius;

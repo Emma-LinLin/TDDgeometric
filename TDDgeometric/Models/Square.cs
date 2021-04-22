@@ -4,8 +4,12 @@ namespace TDDgeometric.Models
 {
     public class Square : GeometricShapes
     {
-        public float Side { get; set; }
+        private float Side { get; set; }
 
+        /// <summary>
+        /// Sets the property of object
+        /// </summary>
+        /// <param name="side">input data for the side of the object</param>
         public Square(float side)
         {
             Side = side;
